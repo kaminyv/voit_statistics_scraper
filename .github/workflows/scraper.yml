@@ -33,5 +33,5 @@ jobs:
           git add results/*.csv
           timestamp=$(TZ='America/New_York' date +'%a, %F at %H:%M %Z')
           git commit -m "Scraping updated: ${timestamp}" || exit 0
-          git pull origin main
+          git pull origin main --ff-only
           git push
