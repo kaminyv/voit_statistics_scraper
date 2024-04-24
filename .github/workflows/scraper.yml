@@ -1,5 +1,8 @@
 name: scraper-v2
 
+on:
+  workflow_dispatch:
+
 jobs:
   scraping:
     runs-on: ubuntu-latest
