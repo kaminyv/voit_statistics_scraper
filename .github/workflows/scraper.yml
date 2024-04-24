@@ -23,8 +23,8 @@ jobs:
 
       - name: Run scraper
         run: | 
-          timestamp=$(TZ='America/New_York' date +'%a, %F at %H:%M %Z')
-          python -m scrapy crawl vlaanderenkiest_be -O results/results${timestamp}.csv:csv
+          current_date=$(date +"%Y-%m-%d_%H-%M-%S")
+          python -m scrapy crawl vlaanderenkiest_be -O results/results_${current_date}.csv:csv
 
       - name: Commit result
         run: |
